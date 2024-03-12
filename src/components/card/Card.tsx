@@ -22,6 +22,7 @@ const Cardhtml = ({ image, price, name, addToCart }: CardProps) => {
           <CiShoppingCart />
           <span className="mas">+</span>
         </button>
+        <section className="hover_name">{name}</section>
       </div>
     </Carddiv>
   );

@@ -1,16 +1,21 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background-color: var(--bg-color-blanco);
   color: var(--bg-color-negro);
+  z-index: 100;
+  box-shadow: 0px 0px 10px var(--color-general-page-3);
 
   & .navbar-logo img {
     height: 50px; /* Ajustar según el tamaño de tu logo */
     border-radius: 50px;
+    cursor: pointer;
   }
 
   & .navbar-menu {
@@ -23,6 +28,20 @@ export const Nav = styled.nav`
       & a {
         color: var(--bg-color-negro);
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+
+        & span {
+          font-size: 30px;
+          color: var(--color-general-page-1);
+
+          & svg {
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+        }
       }
     }
   }
@@ -30,6 +49,8 @@ export const Nav = styled.nav`
   .navbar-cart {
     font-size: 30px;
     position: relative;
+
+    cursor: pointer;
 
     & .count {
       position: relative;

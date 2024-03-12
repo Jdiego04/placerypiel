@@ -2,31 +2,45 @@ import { ThemeProvider } from "styled-components"; // Define the interface for t
 import { Nav } from "./Navbar.styled";
 import { CiShoppingCart } from "react-icons/ci";
 import logo from "../../assets/logosaborypiel.webp";
-
+import { useNavigate } from "react-router-dom";
+import { BiHomeHeart } from "react-icons/bi";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface NabvarProps {}
+interface NabvarProps {
+  showhome?: boolean;
+}
 
 // Use the Single Responsibility Principle (SRP)
-const Nabvarhtml = ({}: NabvarProps) => {
+const Nabvarhtml = ({ showhome = false }: NabvarProps) => {
+  const navigate = useNavigate();
+
+  const handleNavigateCart = () => {
+    navigate("/cart");
+  };
+  const handleNavigateHome = () => {
+    navigate("/");
+  };
   return (
     <Nav>
-      <div className="navbar-logo">
+      <div className="navbar-logo" onClick={handleNavigateHome}>
         <img src={logo} alt="Logo" />
       </div>
       <ul className="navbar-menu">
         <li>
-          <a href="#">Opción 1</a>
-        </li>
-        <li>
-          <a href="#">Opción 2</a>
-        </li>
-        <li>
-          <a href="#">Opción 3</a>
+          {showhome && (
+            <a href="#">
+              <span>
+                <BiHomeHeart />
+              </span>
+              Inicio
+            </a>
+          )}
         </li>
       </ul>
       <div className="navbar-cart">
-        <CiShoppingCart />
-        <span className="count">0</span>
+        <span onClick={handleNavigateCart}>
+          <CiShoppingCart />
+          <span className="count">0</span>
+        </span>
       </div>
     </Nav>
   );
