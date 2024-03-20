@@ -13,7 +13,11 @@ import imagen66 from "../assets/imagen66.webp";
 import imagen77 from "../assets/imagen77.webp";
 import imagen88 from "../assets/imagen88.webp";
 
-export const imagesCard = [imagen1, imagen2, imagen3, imagen4, imagen5];
+import imagenCat1 from "../assets/cat1.jpg";
+import imagenCat2 from "../assets/cat2.jpg";
+import imagenCat3 from "../assets/cat3.jpg";
+
+export const imagesCard = [imagenCat1, imagenCat2, imagenCat3, imagen4, imagen5];
 
 export const imagesButton = {
   data: [
