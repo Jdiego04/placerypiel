@@ -16,6 +16,12 @@ const Nabvarhtml = ({ showhome = false }: NabvarProps) => {
   const handleNavigateCart = () => {
     navigate("/cart");
   };
+  const handleNavigateInicio = () => {
+    navigate("/inicio/true");
+  };
+  const handleNavigateRegistro = () => {
+    navigate("/registro/true");
+  };
   const handleNavigateHome = () => {
     navigate("/");
   };
@@ -27,7 +33,7 @@ const Nabvarhtml = ({ showhome = false }: NabvarProps) => {
       <ul className="navbar-menu">
         <li>
           {showhome && (
-            <a href="#">
+            <a onClick={handleNavigateHome}>
               <span>
                 <BiHomeHeart />
               </span>
@@ -35,13 +41,23 @@ const Nabvarhtml = ({ showhome = false }: NabvarProps) => {
             </a>
           )}
         </li>
+        <li>
+          <a onClick={handleNavigateInicio} className={"iniciar"}>
+            Iniciar sesión
+          </a>
+        </li>
+        <li>
+          <a onClick={handleNavigateRegistro} className={"registro"}>
+            Registrarse
+          </a>
+        </li>
+        <div className="navbar-cart">
+          <span onClick={handleNavigateCart}>
+            <CiShoppingCart />
+            <span className="count">0</span>
+          </span>
+        </div>
       </ul>
-      <div className="navbar-cart">
-        <span onClick={handleNavigateCart}>
-          <CiShoppingCart />
-          <span className="count">0</span>
-        </span>
-      </div>
     </Nav>
   );
 };

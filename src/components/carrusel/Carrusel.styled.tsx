@@ -29,15 +29,16 @@ export const Carruseldiv = styled.nav`
     height: 30px;
     border-radius: 50px;
     &:hover {
-      background-color: var(--color-general-page-4);
+      color: var(--color-blanco);
+      background-color: var(--color-general-page-1);
     }
   }
 
   .prev {
-    left: 0;
+    left: 10px;
   }
 
   .next {
-    right: 0;
+    right: 10px;
   }
 `;

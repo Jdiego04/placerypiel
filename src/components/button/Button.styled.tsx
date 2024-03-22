@@ -1,27 +1,38 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ButtonCss = styled.button<{ variant: string }>`
   appearance: none;
-  border: none;
-  margin-top: ${(props) => (props.variant == 'mas' || props.variant == 'menos' ? '0' : '1rem')};
-  padding: ${(props) => (props.variant == 'mas' || props.variant == 'menos' ? '5px' : '11px 10px')};
-  width: ${(props) => (props.variant == 'mas' || props.variant == 'menos' ? 'auto' : '100%')};
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
   border-radius: 5px;
-  font-size: 15px;
-  color: ${(props) => props.theme.color};
-  background-color: ${(props) => props.theme.bgColor};
+
+  border: ${(props) =>
+    props.variant == "secundario"
+      ? " 1px solid var(--color-general-page-1)"
+      : "none"};
+
+  background-color: ${(props) =>
+    props.variant == "secundario"
+      ? "var(--color-blanco)"
+      : "var(--color-general-page-1)"};
+
+  color: ${(props) =>
+    props.variant == "secundario"
+      ? "var(--color-negro)"
+      : "var(--color-blanco)"};
+
+  &:hover {
+    background-color: ${(props) =>
+      props.variant == "secundario"
+        ? "var(--color-blanco)"
+        : "var(--color-general-page-2)"};
+  }
 
   &::first-letter {
     text-transform: uppercase;
   }
-
-  &:hover {
-    outline: auto;
-    cursor: pointer;
-    outline-offset: 3px;
-    outline-color: ${(props) => props.theme.bgColor};
-  }
-
   &:disabled {
     cursor: no-drop;
   }

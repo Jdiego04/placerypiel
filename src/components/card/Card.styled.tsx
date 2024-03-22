@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Carddiv = styled.button`
   width: 200px;
-  border: 1px solid var(--color-general-page-3);
+  border: none;
   overflow: hidden;
   background-color: transparent;
   & .card-image {
@@ -56,7 +56,7 @@ export const Carddiv = styled.button`
         position: absolute;
         font-weight: lighter;
         font-size: 13px;
-        transform: translate(-17px, 8px);
+        transform: translate(-18px, 6.5px);
       }
     }
 
@@ -64,7 +64,7 @@ export const Carddiv = styled.button`
       display: none;
       width: 200px;
       position: absolute;
-      top: -25px;
+      top: -28px;
       text-transform: lowercase;
       background-color: var(--color-general-page-2);
       color: var(--color-blanco);
@@ -76,7 +76,7 @@ export const Carddiv = styled.button`
         text-transform: uppercase;
       }
     }
-    
+
     & .card-name:hover ~ .hover_name {
       display: block;
     }

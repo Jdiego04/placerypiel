@@ -23,8 +23,14 @@ export const Nav = styled.nav`
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
     & li {
       margin-right: 1rem;
+
       & a {
         color: var(--bg-color-negro);
         text-decoration: none;
@@ -32,6 +38,10 @@ export const Nav = styled.nav`
         justify-content: center;
         justify-items: center;
         align-items: center;
+        cursor: pointer;
+        font-family: "Satisfy", cursive;
+        font-weight: 400;
+        font-style: normal;
 
         & span {
           font-size: 30px;
@@ -41,6 +51,26 @@ export const Nav = styled.nav`
             padding: 0 !important;
             margin: 0 !important;
           }
+        }
+      }
+
+      & .registro,
+      & .iniciar {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid var(--color-general-page-3);
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid var(--color-general-page-3);
+          /* background: linear-gradient(
+            to top,
+            var(--color-general-page-2),
+            var(--color-general-page-3),
+            var(--color-general-page-3),
+            var(--color-general-page-4)
+          ); */
         }
       }
     }
@@ -54,7 +84,6 @@ export const Nav = styled.nav`
 
     & .count {
       position: relative;
-
       font-size: 10px;
       background-color: var(--color-general-page-2);
       color: var(--color-blanco);

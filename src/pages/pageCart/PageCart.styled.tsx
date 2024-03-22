@@ -166,22 +166,6 @@ export const Section = styled.section`
       & .button {
         width: 100%;
         padding: 10px;
-
-        & button {
-          appearance: none;
-          width: 100%;
-          padding: 10px;
-          border: none;
-          background-color: var(--color-general-page-1);
-          cursor: pointer;
-          color: var(--color-blanco);
-          font-size: 18px;
-          border-radius: 5px;
-
-          &:hover {
-            background-color: var(--color-general-page-2);
-          }
-        }
       }
     }
   }

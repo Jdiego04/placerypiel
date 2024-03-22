@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 :root {
   --txt-color-negro: #000;
+  --color-negro-opaco: #0000005a;
   --bg-btn-primario: #fff;
   --bg-btn-secundario: #dadada;
   --bg-secundario: #dadada;
@@ -27,7 +30,7 @@
   --bg-color-peligro-btn: red;
   --bg-popup-blur: rgba(0, 0, 0, 0.5);
   --bg-popup-shadow: rgba(0, 0, 0, 0.3);
-  --color-azul-txt: rgba(128, 0, 128, 0.877);
+  --color-azul-txt: rgba(43, 0, 255, 0.719);
   --color-hover-drop: #f1f1f1;
 
   --color-general-page-1: #cf4075;
